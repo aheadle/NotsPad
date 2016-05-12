@@ -25,7 +25,13 @@
         <activity
             android:name=".NotepadDetailActivity"
             android:label="@string/title_activity_notepad_detail"
-            android:theme="@style/AppTheme"></activity>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                />
+        </activity>
     </application>
 
 </manifest>

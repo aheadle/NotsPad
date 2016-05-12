@@ -41,9 +41,7 @@ public class NotepadDetailActivity extends AppCompatActivity implements RadioGro
      * 初始化数据，控件
      */
     private void setActionBar(){
-        ActionBar bar=
-                getActionBar();
-        bar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     private void setTextContent() {
         contentTv=(EditText) findViewById(R.id.contentId);

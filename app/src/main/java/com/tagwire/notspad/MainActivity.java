@@ -27,12 +27,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         dao = new NotePadDao(this);
         adapter = new SimpleCursorAdapter(this, R.layout.list_item_2, cursor, new String[]{"_content", "_created"},
                 new int[]{R.id.textView1, R.id.textView2}, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
         );
-//        setListAdapter(adapter);
-//        registerForContextMenu(getListView());
+        ListView listView = (ListView) findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+//      registerForContextMenu(getListView());
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,NotepadDetailActivity.class);
+                intent.putExtra("idKey",(int)id);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -47,12 +58,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.changeCursor(cursor);
     }
 
-//    @Override
-//    protected void onListItemClick(ListView l, View v, int position, long id) {
-//        Intent intent = new Intent(this,NotepadDetailActivity.class);
-//        intent.putExtra("idKey",(int)id);
-//        startActivity(intent);
-//    }
 
     @Override
     protected void onDestroy() {
