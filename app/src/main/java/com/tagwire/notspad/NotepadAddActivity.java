@@ -3,6 +3,7 @@ package com.tagwire.notspad;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -16,7 +17,7 @@ import java.util.Date;
 /**
  * 添加新的记录的活动界面
  */
-public class NotepadAddActivity extends Activity {
+public class NotepadAddActivity extends AppCompatActivity {
     private EditText contentEt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

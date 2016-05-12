@@ -3,6 +3,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -18,7 +19,7 @@ import com.tagwire.notspad.NotepadAddActivity;
 import com.tagwire.notspad.NotepadDetailActivity;
 import com.tagwire.notspad.R;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends AppCompatActivity {
     private NotePadDao dao;
     private Cursor cursor;
     private SimpleCursorAdapter adapter;
@@ -30,8 +31,8 @@ public class MainActivity extends ListActivity {
         adapter = new SimpleCursorAdapter(this, R.layout.list_item_2, cursor, new String[]{"_content", "_created"},
                 new int[]{R.id.textView1, R.id.textView2}, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
         );
-        setListAdapter(adapter);
-        registerForContextMenu(getListView());
+//        setListAdapter(adapter);
+//        registerForContextMenu(getListView());
     }
 
     @Override
@@ -46,12 +47,12 @@ public class MainActivity extends ListActivity {
         adapter.changeCursor(cursor);
     }
 
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        Intent intent = new Intent(this,NotepadDetailActivity.class);
-        intent.putExtra("idKey",(int)id);
-        startActivity(intent);
-    }
+//    @Override
+//    protected void onListItemClick(ListView l, View v, int position, long id) {
+//        Intent intent = new Intent(this,NotepadDetailActivity.class);
+//        intent.putExtra("idKey",(int)id);
+//        startActivity(intent);
+//    }
 
     @Override
     protected void onDestroy() {
