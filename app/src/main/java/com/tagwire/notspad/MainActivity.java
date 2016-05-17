@@ -10,9 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Spinner;
 
 import com.tagwire.notspad.NotePadDao;
 import com.tagwire.notspad.NotepadAddActivity;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private NotePadDao dao;
     private Cursor cursor;
     private SimpleCursorAdapter adapter;
-
+    private Spinner mSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        /**
+         * 自定义spinner
+         */
+        mSpinner = (Spinner) findViewById(R.id.spinner);
+        //数据源
+        String[] mItems = getResources().getStringArray(R.array.spinnername);
+        //绑定数据源
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, R.layout.custom_spinner,mItems);
+        //绑定
+        mSpinner.setAdapter(spinnerAdapter);
     }
 
     @Override
