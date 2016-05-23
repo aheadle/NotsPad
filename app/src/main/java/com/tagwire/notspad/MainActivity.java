@@ -15,17 +15,27 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.tagwire.notspad.NotePadDao;
 import com.tagwire.notspad.NotepadAddActivity;
 import com.tagwire.notspad.NotepadDetailActivity;
 import com.tagwire.notspad.R;
+import com.tagwire.notspad.model.Weather;
+import com.tagwire.notspad.util.GetJson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     private NotePadDao dao;
     private Cursor cursor;
     private SimpleCursorAdapter adapter;
     private Spinner mSpinner;
+    public static final String JSON_DATA = "...";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, R.layout.custom_spinner,mItems);
         //绑定
         mSpinner.setAdapter(spinnerAdapter);
+
+        //想要测试一下gson
+        getJsonMsg();
     }
 
     @Override
@@ -114,5 +127,26 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onContextItemSelected(item);
+    }
+
+
+    public void getJsonMsg() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String weaJson = GetJson.request(Const.httpUrl,Const.httpArg);
+                try {
+                    JSONObject obj = new JSONObject(weaJson);
+                    JSONArray weatherObj = obj.getJSONArray("HeWeather data service 3.0");
+                    Weather weather = new Gson().fromJson(weatherObj.toString(), Weather.class);
+                    String tell = weather.getAqi().getCity().toString();
+                    Toast.makeText(MainActivity.this,tell,Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }).start();
+
     }
 }
