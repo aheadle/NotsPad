@@ -1,5 +1,4 @@
-package com.tagwire.notspad;
-import android.app.ListActivity;
+package com.tagwire.notspad.activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -11,30 +10,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.tagwire.notspad.NotePadDao;
-import com.tagwire.notspad.NotepadAddActivity;
-import com.tagwire.notspad.NotepadDetailActivity;
+import com.tagwire.notspad.dao.NotePadDao;
 import com.tagwire.notspad.R;
-import com.tagwire.notspad.model.Weather;
-import com.tagwire.notspad.util.GetJson;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private NotePadDao dao;
     private Cursor cursor;
     private SimpleCursorAdapter adapter;
     private Spinner mSpinner;
+
+    private Button contacts_btn;
     public static final String JSON_DATA = "...";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //联系人按钮
+        contacts_btn = (Button) findViewById(R.id.add_contacts);
+        contacts_btn.setOnClickListener(this);
         /**
          * 自定义spinner
          */
@@ -67,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mSpinner.setAdapter(spinnerAdapter);
 
         //想要测试一下gson
-        getJsonMsg();
+        //getJsonMsg();
     }
 
     @Override
@@ -129,24 +123,33 @@ public class MainActivity extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
-
-    public void getJsonMsg() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String weaJson = GetJson.request(Const.httpUrl,Const.httpArg);
-                try {
-                    JSONObject obj = new JSONObject(weaJson);
-                    JSONArray weatherObj = obj.getJSONArray("HeWeather data service 3.0");
-                    Weather weather = new Gson().fromJson(weatherObj.toString(), Weather.class);
-                    String tell = weather.getAqi().getCity().toString();
-                    Toast.makeText(MainActivity.this,tell,Toast.LENGTH_SHORT).show();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }).start();
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.add_contacts:
+                startActivity(new Intent(MainActivity.this,ContactActivity.class));
+                break;
+        }
     }
+
+
+//    public void getJsonMsg() {
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                String weaJson = GetJson.request(Const.httpUrl,Const.httpArg);
+//                try {
+//                    JSONObject obj = new JSONObject(weaJson);
+//                    JSONArray weatherObj = obj.getJSONArray("HeWeather data service 3.0");
+//                    Weather weather = new Gson().fromJson(weatherObj.toString(), Weather.class);
+//                    String tell = weather.getAqi().getCity().toString();
+//                    Toast.makeText(MainActivity.this,tell,Toast.LENGTH_SHORT).show();
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//        }).start();
+//
+//    }
 }

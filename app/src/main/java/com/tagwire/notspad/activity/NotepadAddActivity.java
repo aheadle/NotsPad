@@ -1,6 +1,5 @@
-package com.tagwire.notspad;
+package com.tagwire.notspad.activity;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.tagwire.notspad.dao.NotePadDao;
+import com.tagwire.notspad.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

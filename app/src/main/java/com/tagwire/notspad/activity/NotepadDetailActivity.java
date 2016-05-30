@@ -1,7 +1,5 @@
-package com.tagwire.notspad;
+package com.tagwire.notspad.activity;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -16,6 +14,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.tagwire.notspad.dao.NotePadDao;
+import com.tagwire.notspad.R;
 
 /**
  * 记事本详细记录

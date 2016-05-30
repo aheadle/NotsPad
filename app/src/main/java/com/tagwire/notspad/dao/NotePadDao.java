@@ -1,4 +1,4 @@
-package com.tagwire.notspad;
+package com.tagwire.notspad.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
