@@ -21,6 +21,8 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        getSupportActionBar().setTitle("记事本");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         List<String> searchUserList = new ArrayList<String>();
         searchUserList.add("张三");
         searchUserList.add("李四");
