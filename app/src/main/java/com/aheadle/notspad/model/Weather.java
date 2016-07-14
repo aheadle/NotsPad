@@ -1,4 +1,4 @@
-package com.tagwire.notspad.model;
+package com.aheadle.notspad.model;
 
 /**
  * Created by Jing on 16/5/23.

@@ -1,4 +1,4 @@
-package com.tagwire.notspad.activity;
+package com.aheadle.notspad.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.tagwire.notspad.R;
-import com.tagwire.notspad.adapter.SearchUserAdapter;
+import com.aheadle.notspad.adapter.SearchUserAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

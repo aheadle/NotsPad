@@ -1,4 +1,4 @@
-package com.tagwire.notspad.adapter;
+package com.aheadle.notspad.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

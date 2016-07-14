@@ -1,4 +1,4 @@
-package com.tagwire.notspad.activity;
+package com.aheadle.notspad.activity;
 
 import android.os.Build;
 import android.support.annotation.LayoutRes;
