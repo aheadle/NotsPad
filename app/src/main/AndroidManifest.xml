@@ -35,7 +35,13 @@
                 android:value="com.aheadle.notspad.activity.MainActivity" />
         </activity>
         <activity android:name="com.aheadle.notspad.activity.ContactActivity" />
-        <activity android:name="com.aheadle.notspad.activity.BaseActivity"></activity>
+        <activity android:name="com.aheadle.notspad.activity.BaseActivity"></activity>\
+
+        <receiver android:name="com.aheadle.notspad.service.MyBoradcast">
+            <intent-filter>
+                <action android:name="com.facedetect.pickup"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
