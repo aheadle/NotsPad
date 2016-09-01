@@ -9,6 +9,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.aheadle.notspad.activity.ContactActivity">
+    <com.aheadle.notspad.util.HintAnimEditText
+        android:id="@+id/edittxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search"
+        android:imeOptions="actionSearch"
+        android:layout_alignParentBottom="true"
+        android:inputType="text"
+        android:singleLine="true"
+        />
     <ListView
         android:id="@+id/search_user_list"
         android:layout_width="fill_parent"
