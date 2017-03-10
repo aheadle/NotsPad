@@ -1,4 +1,4 @@
-package com.aheadle.notspad.util;
+package com.knjin.notspad.util;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

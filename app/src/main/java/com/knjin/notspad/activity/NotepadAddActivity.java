@@ -1,4 +1,4 @@
-package com.aheadle.notspad.activity;
+package com.knjin.notspad.activity;
 
 import android.content.ContentValues;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.aheadle.notspad.dao.NotePadDao;
+import com.knjin.notspad.dao.NotePadDao;
 import com.tagwire.notspad.R;
 
 import java.text.SimpleDateFormat;

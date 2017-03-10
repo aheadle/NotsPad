@@ -1,4 +1,4 @@
-package com.aheadle.notspad.util;
+package com.knjin.notspad.util;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;

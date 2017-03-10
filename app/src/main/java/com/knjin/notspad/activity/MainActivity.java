@@ -1,4 +1,4 @@
-package com.aheadle.notspad.activity;
+package com.knjin.notspad.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,9 +19,8 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.aheadle.notspad.dao.NotePadDao;
+import com.knjin.notspad.dao.NotePadDao;
 import com.tagwire.notspad.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

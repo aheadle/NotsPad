@@ -1,4 +1,4 @@
-package com.aheadle.notspad.application;
+package com.knjin.notspad.application;
 
 import android.app.Application;
 

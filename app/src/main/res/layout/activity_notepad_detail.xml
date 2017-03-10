@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.aheadle.notspad.activity.NotepadDetailActivity"
+    tools:context="com.knjin.notspad.activity.NotepadDetailActivity"
     tools:showIn="@layout/activity_notepad_detail">
     <ScrollView
         android:id="@+id/scrollViewId"

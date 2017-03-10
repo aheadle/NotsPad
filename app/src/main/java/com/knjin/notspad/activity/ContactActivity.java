@@ -1,4 +1,4 @@
-package com.aheadle.notspad.activity;
+package com.knjin.notspad.activity;
 
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +9,9 @@ import android.widget.Adapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.aheadle.notspad.util.HintAnimEditText;
+import com.knjin.notspad.util.HintAnimEditText;
 import com.tagwire.notspad.R;
-import com.aheadle.notspad.adapter.SearchUserAdapter;
+import com.knjin.notspad.adapter.SearchUserAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.aheadle.notspad;
+package com.knjin.notspad;
 
 /**
  * Created by Jing on 16/5/23.

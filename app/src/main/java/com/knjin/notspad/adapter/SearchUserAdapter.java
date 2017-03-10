@@ -1,4 +1,4 @@
-package com.aheadle.notspad.adapter;
+package com.knjin.notspad.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
