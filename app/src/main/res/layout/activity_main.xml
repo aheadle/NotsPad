@@ -25,4 +25,22 @@
         android:id="@+id/listView"
         />
 
+    <Button
+        android:id="@+id/btn_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/add_contacts"
+        android:text="语义合成" />
+
+    <Button
+        android:id="@+id/btn_enlarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/btn_sound"
+        android:text="选中放大" />
+
 </RelativeLayout>

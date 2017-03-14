@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Cursor cursor;
     private SimpleCursorAdapter adapter;
     private Spinner mSpinner;
-
+    private Button soundBtn;
     private Button contacts_btn;
+    private Button enlarge_btn;
     //两个handler
     private Handler mHandler;
     private Handler nHandler;
@@ -105,7 +106,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }).start();
 
+        initData();
 
+    }
+
+    private void initData() {
+        //初始化数据
+        soundBtn = (Button) findViewById(R.id.btn_sound);
+        enlarge_btn = (Button) findViewById(R.id.btn_enlarge);
+        enlarge_btn.setOnClickListener(this);
     }
 
 
@@ -186,6 +195,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.add_contacts:
                 startActivity(new Intent(MainActivity.this, ContactActivity.class));
                 break;
+            case R.id.btn_sound:
+                BaiduSampleActivity.startThisActivity(this);
+                break;
+            case R.id.btn_enlarge:
+                EnlargeActivity.startThisActivity(this);
+                break;
+            default:break;
         }
     }
 

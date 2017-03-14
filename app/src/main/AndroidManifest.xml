@@ -2,7 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tagwire.notspad">
 
+    <!-- 测试百度语音SDK -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:name="com.knjin.notspad.application.MyApplication"
@@ -35,13 +43,15 @@
                 android:value="com.knjin.notspad.activity.MainActivity" />
         </activity>
         <activity android:name="com.knjin.notspad.activity.ContactActivity" />
-        <activity android:name="com.knjin.notspad.activity.BaseActivity"></activity>\
-
+        <activity android:name="com.knjin.notspad.activity.BaseActivity" />
+        \
         <receiver android:name="com.knjin.notspad.service.MyBoradcast">
             <intent-filter>
-                <action android:name="com.facedetect.pickup"/>
+                <action android:name="com.facedetect.pickup" />
             </intent-filter>
         </receiver>
+
+        <activity android:name="com.knjin.notspad.activity.EnlargeActivity"></activity>
     </application>
 
 </manifest>
