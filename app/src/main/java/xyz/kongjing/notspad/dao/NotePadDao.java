@@ -1,4 +1,4 @@
-package com.knjin.notspad.dao;
+package xyz.kongjing.notspad.dao;
 
 import android.content.ContentValues;
 import android.content.Context;

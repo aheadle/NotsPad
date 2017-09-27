@@ -1,4 +1,4 @@
-package com.knjin.notspad.activity;
+package xyz.kongjing.notspad.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,8 +20,8 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 
-import com.knjin.notspad.dao.NotePadDao;
-import com.tagwire.notspad.R;
+import xyz.kongjing.notspad.dao.NotePadDao;
+import xyz.tagwire.notspad.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private NotePadDao dao;

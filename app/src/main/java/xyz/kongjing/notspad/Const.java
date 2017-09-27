@@ -1,4 +1,4 @@
-package com.knjin.notspad;
+package xyz.kongjing.notspad;
 
 /**
  * Created by Jing on 16/5/23.

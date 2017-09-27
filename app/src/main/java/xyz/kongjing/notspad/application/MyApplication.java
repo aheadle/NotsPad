@@ -1,4 +1,4 @@
-package com.knjin.notspad.application;
+package xyz.kongjing.notspad.application;
 
 import android.app.Application;
 

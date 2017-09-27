@@ -1,4 +1,4 @@
-package com.knjin.notspad.util;
+package xyz.kongjing.notspad.util;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

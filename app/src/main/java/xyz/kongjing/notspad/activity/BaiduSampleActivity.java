@@ -1,7 +1,6 @@
-package com.knjin.notspad.activity;
+package xyz.kongjing.notspad.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +8,6 @@ import android.support.annotation.Nullable;
 import com.baidu.tts.client.SpeechError;
 import com.baidu.tts.client.SpeechSynthesizer;
 import com.baidu.tts.client.SpeechSynthesizerListener;
-import com.tagwire.notspad.R;
 
 /**
  * Created by Jing on 17/3/13.
@@ -25,7 +23,7 @@ public class BaiduSampleActivity extends Activity implements SpeechSynthesizerLi
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_baidu);
+        setContentView(xyz.tagwire.notspad.R.layout.activity_baidu);
         initData();
     }
 

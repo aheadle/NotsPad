@@ -1,4 +1,4 @@
-package com.knjin.notspad.adapter;
+package xyz.kongjing.notspad.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.tagwire.notspad.R;
+import xyz.tagwire.notspad.R;
 
 import java.util.HashMap;
 import java.util.List;

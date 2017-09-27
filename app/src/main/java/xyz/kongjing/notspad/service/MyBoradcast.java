@@ -1,11 +1,11 @@
-package com.knjin.notspad.service;
+package xyz.kongjing.notspad.service;
 
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 
-import com.knjin.notspad.dao.NotePadDao;
+import xyz.kongjing.notspad.dao.NotePadDao;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

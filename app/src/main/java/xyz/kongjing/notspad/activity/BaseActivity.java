@@ -1,4 +1,4 @@
-package com.knjin.notspad.activity;
+package xyz.kongjing.notspad.activity;
 
 import android.os.Build;
 import android.support.annotation.LayoutRes;
@@ -10,14 +10,12 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.tagwire.notspad.R;
-
 public class BaseActivity extends AppCompatActivity {
     private LinearLayout rootLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.setContentView(R.layout.activity_base);
+        super.setContentView(xyz.tagwire.notspad.R.layout.activity_base);
         //经过测试代码直接声明透明状态栏更有效
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
             WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
@@ -27,7 +25,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(xyz.tagwire.notspad.R.id.toolbar);
         if(toolbar!=null){
             setSupportActionBar(toolbar);
         }
@@ -42,7 +40,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void setContentView(View view) {
         super.setContentView(view);
-        rootLayout = (LinearLayout) findViewById(R.id.root_layout);
+        rootLayout = (LinearLayout) findViewById(xyz.tagwire.notspad.R.id.root_layout);
         if(rootLayout==null){
             rootLayout.addView(view, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT
                     , ViewGroup.LayoutParams.MATCH_PARENT));

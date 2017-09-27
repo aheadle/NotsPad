@@ -1,4 +1,4 @@
-package com.knjin.notspad.activity;
+package xyz.kongjing.notspad.activity;
 
 import android.app.AlertDialog;
 import android.content.ContentValues;
@@ -15,8 +15,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.knjin.notspad.dao.NotePadDao;
-import com.tagwire.notspad.R;
+import xyz.kongjing.notspad.dao.NotePadDao;
+import xyz.tagwire.notspad.R;
 
 /**
  * 记事本详细记录
